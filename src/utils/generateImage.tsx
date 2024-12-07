@@ -1,6 +1,6 @@
 import fetch from 'node-fetch';
 
-const generateImage = async (prompt: any) => {
+const generateImage = async (prompt: string) => {
   const apiKey = process.env.AZURE_OPENAI_KEY;
   const endpoint = process.env.AZURE_OPENAI_ENDPOINT;
   const deploymentName = 'dall-e-3'; // Replace with your DALL·E 3 deployment name
