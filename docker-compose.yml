@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  nextjs:
+    container_name: nextjs-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3100:3100"
+    environment:
+      - PORT=3100
+    volumes:
+      - .:/app # Mount the current directory to /app in the container
