@@ -23,15 +23,15 @@ jobs:
       - name: Build Docker image
         run: |
           docker build -t ghcr.io/sonichigo/wallpaper-ai:${{ github.sha }} .
-          
+
       - name: Push Docker image
         run: |
           docker push ghcr.io/sonichigo/wallpaper-ai:${{ github.sha }}
 
       - name: Tag latest image
         run: |
-          docker tag ghcr.io/sonichigo/wallpaper-ai:${{ github.sha }} ghcr.io/${{ github.repository }}/wallpaper-ai:latest
-          
+          docker tag ghcr.io/sonichigo/wallpaper-ai:${{ github.sha }} ghcr.io/sonichigo/wallpaper-ai:latest
+
       - name: Push the "latest" tag
         run: |
           docker push ghcr.io/sonichigo/wallpaper-ai:latest
