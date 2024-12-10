@@ -9,7 +9,6 @@ COPY package.json package-lock.json* ./
 
 # Install dependencies
 RUN npm install --legacy-peer-deps
-RUN npm ci
 # Copy the rest of the application files
 COPY . .
 
@@ -22,7 +21,6 @@ FROM builder AS runner
 # Set the working directory
 WORKDIR /app
 COPY --from=builder /app/public ./public
-COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
 # Expose the application port
