@@ -63,9 +63,10 @@ const ImageGenerator = () => {
 
   return (
     <div className="max-w-full mx-auto p-6 bg-gray-900 text-white shadow-lg rounded-xl">
-      <div className="mb-6">
-        <h1 className="text-3xl font-bold text-white mb-4">ImageInator</h1>
+      <div className="mb-6"> 
+        <h1 className="text-3xl font-bold text-white mb-4">ImageInator</h1> 
         <div className="flex space-x-4">
+        <a href="https://www.producthunt.com/posts/imaginator-2?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-imaginator&#0045;2" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=736986&theme=dark" alt="Imaginator - Wallpaper&#0032;generator&#0032;for&#0032;desktop&#0032;&#0038;&#0032;laptop&#0032;powered&#0032;by&#0032;GenAI | Product Hunt" width="250" height="54" content-align="center" /></a>
           <div className="flex-grow">
             <input
               type="text"
